@@ -42,7 +42,7 @@ const CustomTabs = () => {
     const tabBox = (text, value) => {
         const setText = (text) => {
             return (
-                <Box sx={{ display: "flex", alignItems: "center", gap: "5px", }}>
+                <Box sx={{ display: "flex", alignItems: "center", gap: "5px", padding: 0 }}>
                     {image(text)}
                     <Typography sx={{ display: "flex", gap: "10px", alignItems: "center" }}>  {text}
                     </Typography>
@@ -52,11 +52,11 @@ const CustomTabs = () => {
             )
         }
         return (
-            <Tab key={value} label={setText(text)} value={value} style={{ display: "flex", justifyContent: "space-around", textTransform: "none" }} />
+            <Tab key={value} label={setText(text)} value={value} style={{ display: "flex", flexWrap: "wrap", textTransform: "none" }} />
         )
     }
     return (
-        <Box>
+        <Box sx={{ display: "flex", }}>
             <Tabs
                 value={value}
                 onChange={(event, newValue) => {

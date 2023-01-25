@@ -3,15 +3,16 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 import { AiOutlineStar } from "react-icons/ai";
 import { VscRepoForked } from "react-icons/vsc";
 import { Box, Typography } from '@mui/material';
+import { CustomHeaderRightStackWrapper } from './config';
+
 
 const HeaderRightStack = () => {
-    const box2Style = {
+    const boxStyle = {
         display: "flex", flexDirection: "row", alignItems: "center", border: "1px solid grey", borderRadius: "10px", padding: "2px 10px", margin: 0,
     }
-
     return (
-        <Box style={{ display: "flex", gap: "50px" }}>
-            <Box style={box2Style}>
+        <CustomHeaderRightStackWrapper>
+            <Box style={boxStyle}>
                 <Box sx={{ display: "flex" }}>
                     <IoIosNotificationsOutline size={"15px"} />
                 </Box>
@@ -35,9 +36,7 @@ const HeaderRightStack = () => {
                     <Typography sx={{ fontSize: "12px", fontWeight: 600 }}>28.8k</Typography>
                 </Box>
             </Box>
-
-        </Box>
-    )
+        </CustomHeaderRightStackWrapper>)
 }
 
 export default HeaderRightStack
