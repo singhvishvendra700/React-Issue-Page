@@ -1,6 +1,6 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
-import GitHubIcon from '@mui/icons-material/GitHub';
+import { AiOutlineGithub } from "react-icons/ai"
 const FooterTable = () => {
     const list = ["Terms", "Privacy", "Security", "Status", "Docs", "GitHub", "Contact GitHub", "Pricing", "API", "Training", "Blog", "About"]
     return (
@@ -8,7 +8,7 @@ const FooterTable = () => {
             {list?.map((item, index) => {
                 return (
                     (item === "GitHub") ? (
-                        <GitHubIcon key={index} />
+                        <AiOutlineGithub key={index} />
                     ) : (
                         <Typography key={index} sx={{ color: "#0969da", fontSize: "12px" }}>{item}</Typography>
                     )
